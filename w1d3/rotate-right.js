@@ -6,29 +6,32 @@ Define this function using function expression syntax.
 HINT: you can use Array's slice() method to create a copy of an array */
 
 /* 1. Understand the Problem 
-    - takes in array and a num(times to be rotated)
-    - don't mutate original, rotated should be within new array
-    - use slice to make shallow copy
+    - takes in array and num(elements to be rotated)
+    - don't mutate original(use slice)
+    - return mutated array then rotated
 */
 
 /* 2. Make a plan 
-    - make copy variable with slice
-    - pop elements off end then unshift to front
-    - perform iteration num times 
+    - make copy variable of array wit slice
+    - use pop and unshift to move elements around
+    - perform iteration num times
     - return mutated copy
 */
 
 /* 3. Carry out the plan */
 
-let rotateRight = function(array,num) {
+let rotateRight = function(array, num) {
+    
     let copy = array.slice()
- 
+
     for(let i = 0; i < num; i++) {
         let popped = copy.pop()
         copy.unshift(popped)
     }
+
     return copy
 }
+
 
 
 let arr = ['a', 'b', 'c', 'd', 'e'];

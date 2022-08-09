@@ -22,10 +22,11 @@ const nestedArr = [
 ];
 
 const getSecondObjValues = arr => {
-    
+
     for(let i = 0; i < arr.length; i++) {
         if (arr[i].length < 2) console.log(null)
-        else console.log(Object.values(arr[i][1]))
+        else console.log(Object.values(arr[i][1])[0])
+    
     }
 }
 

@@ -38,11 +38,11 @@ console.log(repeatingTranslate("her family flew to France"));   // "herer family
 let repeatingTranslate = function(sentence) {
     let splitSentence = sentence.split(" ")
 
-    let translated = splitSentence.map(word => {
+    let translate = splitSentence.map(word => {
         return translateWord(word)
     })
     
-    return translated.join(" ")
+    return translate.join(" ")
 
 };
 

@@ -10,18 +10,18 @@ let autumnClothing = ["warm coat", "hoodie", "jeans", "beanie"];
 //console.log(coat + ",",top + ",",bottoms + ",",hat);
 
 //***without declaring variables first...***
-//let [coat, top, bottoms, hat] = summerClothing;
+let [coat, top, bottoms, hat] = summerClothing;
 //console.log(top + ",",coat + ",",hat + ",",bottoms);
 
 //***reassinging entire array***
-// [coat, top, bottoms, hat] = autumnClothing;
-// console.log(coat + ",",top + ",",bottoms+ ",",hat);
+//[coat, top, bottoms, hat] = autumnClothing;
+//console.log(coat + ",",top + ",",bottoms+ ",",hat);
 
 // //***swapping variables with array destructuring***
 let fastestRoute = "Highways";
 let slowestRoute = "Back Roads";
 
-[fastestRoute, slowestRoute] = [slowestRoute, fastestRoute];
+//[fastestRoute, slowestRoute] = [slowestRoute, fastestRoute];
 
 //console.log(fastestRoute+" are fast", slowestRoute+" are slow")
 
@@ -97,14 +97,14 @@ const packedCar = {
 }
 
 // //***extracting keys as variables***
-// let { tent, bedding } = packedCar;
-//  //console.log(tent);
-//  //console.log(tent.description);
+//  let { tent, bedding } = packedCar;
+// console.log(tent);
+// console.log(tent.description);
 
-//  let { description } = tent;
-//  //console.log(description);
+// let { description } = tent;
+// console.log(description);
 
-//  let { size } = description;
+// let { size } = description;
 // console.log(size);
 
 // //***nested destructuring and dot notation interaction***
@@ -116,7 +116,7 @@ const packedCar = {
 // console.log(pots);
 // console.log(knives);
 
-// //***IMPORTANT: need to use dot notation to mutate value!(move above destructuring, then pots variable logs 3)***
+//***IMPORTANT: need to use dot notation to mutate value!(move above destructuring, then pots variable logs 3)***
 // packedCar.kitchen_kit.cookware.pots = 3;
 // console.log(packedCar.kitchen_kit.cookware.pots);
 
@@ -128,14 +128,14 @@ const packedCar = {
 
 // console.log(pots);
 
-// //***aliased object destructuring***
+//***aliased object destructuring***
 // let { cooler } = packedCar;
 
 // let { drinks: soda, dairy: plant_base_dairy } = cooler;
 
 // console.log(soda);
 
-// //***cleaner code with dot notation when destructuring nested object(2-deep)***
+//***cleaner code with dot notation when destructuring nested object(2-deep)***
 
 //let { kitchen_kit: { dry_goods: { spices } } } = packedCar;
 
@@ -153,7 +153,7 @@ const packedCar = {
 // console.log(otherSpices)
 
 // //*** ...rest with object destructuring(limited compatability)***
-let { tent, cooler, ...otherStuff } = packedCar;
-console.log(tent); 
-console.log(cooler);
-console.log(otherStuff); 
+// let { tent, cooler, ...otherStuff } = packedCar;
+// console.log(tent); 
+// console.log(cooler);
+// console.log(otherStuff); 

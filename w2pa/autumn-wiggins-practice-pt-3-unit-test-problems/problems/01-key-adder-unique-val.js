@@ -26,12 +26,14 @@ Return -
 
 function keyAdderUniqueVal(object, key, value) {
 
-    const values = Object.values(object); // make array of values passed in
+    const values = Object.values(object)
     //console.log(values)
-	if (!values.includes(value)) { //check that value arg is NOT in array
-		object[key] = value; //then add the key/value to object
-	}
-	return object;//mutated object is returned and passed to next function call
+
+    if(!values.includes(value)) {
+        object[key] = value
+    } 
+
+    return object
         
 }
 

@@ -28,16 +28,22 @@ Ideas -
 
 function pickyMyMap(arr, cb) {
 
-	const resultArr = []; //holding var
-	
-	for (let i = 0; i < arr.length; i++) { //classic loop
+	const resultArr = []
 
-		const result = cb(arr[i]); // run cb on ele
-		if (result) resultArr.push(result); //test for falsey then push to hold
-	}
-	return resultArr;
+  for(let i = 0; i < arr.length; i++) {
+    const result = cb(arr[i])
+    if(result) resultArr.push(result)
+  }
+
+  return resultArr
 	
 }
+
+const nums = [1, 2, 3, 4];
+pickyMyMap(nums, (num) => num - 2); // [-1, 1, 2]
+
+const booleans = [true, false, true, false, true];
+pickyMyMap(booleans, (boolean) => !boolean); // [true, true]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

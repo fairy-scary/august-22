@@ -20,7 +20,7 @@ Return -
 ***********************************************************************/
 
 const sentenceMaker = (...words) => {
-	return words.join(' ') + '!';
+  return words.join(' ') + '!'
 }
 
 sentenceMaker('Hello', 'World'); // 'Hello World!'

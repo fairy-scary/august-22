@@ -22,7 +22,6 @@ console.log(clothesList); // ['tshirt', 'pants']
 Args -
   - array
    
-
 Return - 
   - new function that pushes to array arg
 
@@ -33,11 +32,12 @@ Ideas -
 
 function shoppingList(list) {
 
-  return function(item) {
-    list.push(item)
-    return list
-  }
+    return function(item) {
+      list.push(item)
+      return list
+    }
 
+  
 }
 
 const groceryList = ['eggs']

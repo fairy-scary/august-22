@@ -35,21 +35,19 @@ Ideas -
 
 function filterUserProfiles(users, filter) {
   
-  // methods version
-  let filtered = users.filter(user => filter(user))
+  // let filtered = users.filter(user => filter(user))
+  // return filtered.map(obj => obj.name)
   //console.log(filtered)
-  return filtered.map(obj => obj.name)
 
-  // loop version
-  const filteredUserNames = [];
+  const userNames = []
 
-  for (let i = 0; i < users.length; i++) {
-    const user = users[i];
-    if (filter(user)) {
-      filteredUserNames.push(user.name);
+  for(let i = 0;i < users.length; i++) {
+    if(filter(users[i])) {
+      userNames.push(users[i].name)
     }
   }
-  return filteredUserNames;
+  return userNames
+
 
 }
 

@@ -28,16 +28,19 @@ Ideas -
 
 function countCharacters(string) { 
 	
-	let charTracker = {} //make obj to hold the count
+	let charTracker = {}
 
+	
 	for(let i = 0; i < string.length; i++) {
-		//console.log(charTracker[string[i]]) //comes up undefined (not falsey)
-		if(charTracker[string[i]] === undefined) { //need to use equivelancy
-			charTracker[string[i]] = 1 //adding character as key and initial count
+
+		//console.log(charTracker[string[i]])
+		if(charTracker[string[i]] === undefined) {
+			charTracker[string[i]] = 1
 		} else {
-			charTracker[string[i]] += 1 //incrementing count if letter is found again
+			charTracker[string[i]] += 1
 		}
 	}
+
 	//console.log(charTracker)
 	return charTracker
 
@@ -45,10 +48,11 @@ function countCharacters(string) {
 
 function duplicateCharMinCount(string, minCount) {
 
-	let counter = countCharacters(string) //not same variable in memory - scoped!
+	let counter = countCharacters(string)
 
-	let letters = Object.keys(counter) //array of keys(letters)
-	return letters.filter(letter => counter[letter] >= minCount) //filter creates array by checking if the value at each key >= the mincount
+	let letters = Object.keys(counter)
+
+	return letters.filter(letter => counter[letter] >= minCount)
 
 }
 

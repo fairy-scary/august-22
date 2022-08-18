@@ -5,7 +5,7 @@ return false.
 
 // base case - no nums add up to 12 OR two nums add up to 12
 
-// recursive step - slice first letter out each time arg is passed
+// recursive step - slice first element out each time arg is passed
 
 
 Examples:
@@ -18,35 +18,36 @@ addToTwelve([1]); // false
 ***********************************************************************/
 
 function iterativeAdd(arr) {
-
+  
   for(let i = 0; i < arr.length; i++){
-    if(arr[i] + arr[i + 1] === 12) return true
+    if(arr[i] + arr[i+1] === 12) return true
   }
+
   return false
+  
 }
 
 function addToTwelve(arr) {
 
-  if (arr.length < 2) return false;
-  if (arr[0] + arr[1] === 12) return true;
+  if (arr.length < 2) return false
+  if (arr[0] + arr[1] === 12) return true
   // 1 + 3 before recursion
   // 3 + 4
   // 4 + 7
 
-  return addToTwelve(arr.slice(1));
+  return addToTwelve(arr.slice(1))    
          //////////////[3,4,7,5]//////////////
                        //////////////[4,7,5]//////////////
                                      //////////////[7,5]////////////// 
-                                                   //////////////[5]//////////////
-                      
+                                                   //////////////[5]//////////////                
                          
 }
 
 
-console.log(iterativeAdd([1, 3, 4, 7, 5])); // true
-console.log(iterativeAdd([1, 3, 4, 7, 6])); // false
 console.log(addToTwelve([1, 3, 4, 7, 5])); // true
 console.log(addToTwelve([1, 3, 4, 7, 6])); // false
+console.log(iterativeAdd([1, 3, 4, 7, 5])); // true
+console.log(iterativeAdd([1, 3, 4, 7, 6])); // false
 console.log(addToTwelve([1])); // false
 console.log(iterativeAdd([1])); // false
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
